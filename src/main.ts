@@ -1,4 +1,5 @@
 import './style.css';
+import './counter';
 
 console.log("MAIN TS BERHASIL JALAN");
 interface Todo {
