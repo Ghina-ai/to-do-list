@@ -8,20 +8,13 @@ interface Todo {
 }
 
 const taskInput = document.getElementById("taskInput") as HTMLInputElement;
-
 const addBtn = document.getElementById("addBtn") as HTMLButtonElement;
-
 const clearAllBtn = document.getElementById("clearAllBtn") as HTMLButtonElement;
-
 const taskList = document.getElementById("taskList") as HTMLUListElement;
 
 let todos: Todo[] = [];
 
 const STORAGE_KEY = "todo_list_data";
-
-// ==========================
-// LOAD DATA
-// ==========================
 
 function loadTodos() {
   const saved = localStorage.getItem(STORAGE_KEY);
@@ -31,17 +24,9 @@ function loadTodos() {
   }
 }
 
-// ==========================
-// SAVE DATA
-// ==========================
-
 function saveTodos() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
 }
-
-// ==========================
-// RENDER
-// ==========================
 
 function render() {
   taskList.innerHTML = "";
@@ -146,10 +131,6 @@ function render() {
   });
 }
 
-// ==========================
-// TAMBAH TODO
-// ==========================
-
 function addTodo() {
   console.log("TOMBOL TAMBAH DIKLIK");
 
@@ -176,29 +157,13 @@ function addTodo() {
   render();
 }
 
-// ==========================
-// SETUP COUNTER
-// ==========================
-//
-// CUMA 1 BUTTON.
-// addBtn → setupCounter → addTodo
-//
-
 setupCounter(addBtn, addTodo);
-
-// ==========================
-// ENTER
-// ==========================
 
 taskInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     addTodo();
   }
 });
-
-// ==========================
-// HAPUS SEMUA
-// ==========================
 
 clearAllBtn.addEventListener("click", () => {
   if (todos.length === 0) {
@@ -213,11 +178,5 @@ clearAllBtn.addEventListener("click", () => {
     render();
   }
 });
-
-// ==========================
-// START
-// ==========================
-
 loadTodos();
-
 render();
