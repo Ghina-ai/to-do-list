@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css">
-  
+  <link rel="stylesheet" href="src/style.css">
+
   <title>To Do List App</title>
 </head>
 
@@ -17,29 +17,31 @@
 
   <div class="container">
 
-<div class="input-section">
-  <div class="input-group">
-    <input
-      type="text"
-      id="taskInput"
-      placeholder="Tambahkan tugas..."
-    />
+    <div class="input-section">
+      <div class="input-group">
 
-    <button type="button" id="addBtn">
-      ➕ Tambah
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Tambahkan tugas..."
+        />
+
+        <button type="button" id="addBtn">
+          ➕ Tambah
+        </button>
+
+      </div>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <button type="button" id="clearAllBtn" class="danger">
+      🗑️ Hapus Semua
     </button>
-  </div>
-</div>
-
-<ul id="taskList"></ul>
-
-<button type="button" id="clearAllBtn" class="danger">
-  🗑️ Hapus Semua
-</button>
 
   </div>
 
-  <script type="module" src="main.ts"></script>
+  <script type="module" src="src/main.ts"></script>
 
 </body>
 </html>
