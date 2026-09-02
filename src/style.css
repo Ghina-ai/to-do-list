@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInUp {
+from {
+  opacity: 0;
+  transform: translateY(30px);
+  }
+to {
+  opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  padding: 7%;
+  
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 12px;
+  margin-top: 30px;
+  gap: 20px;
+  box-shadow: none;
+}
+
+.column-to-do {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  width: 37.5rem;
+  margin-left: 15.5rem;
+  border-radius: 15px;
+  height: 70px;
+}
+
+.column-to-do h1 {
+  color: white;
+  background-clip: text;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 800;
+}
+
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 13px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.container #addBtn {
+  background: #26579b;
+}
+#addBtn {
+  padding: 10px 15px;
+  gap: 50px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  background-clip: text;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+#addBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(11, 11, 11, 0.4);
+    background: #4770a8;
+}
+
+.btn-delete {
+  gap: 50px;
+  background: #f35c5c;
+  color: white;
+  font-weight: 750;
+}
+.btn-delete:hover {
+  background: #df3a3a;
+}
+
+.btn-edit {
+  gap: 50px;
+  background: #7d9874;
+  color: white;
+  font-weight: 750;
+  
+}
+.btn-edit:hover {
+  background: #4b9755;
+}
+
+/* supaya tombolnya rapi */
+.btn-edit, .btn-delete {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 9px;
+  margin-left: auto;
+  justify-content: space-between;
+  flex: 1;
+  
+}
+
+
+#taskList {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f8f8;
+  padding: 13px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #3e4860;
+  box-shadow: 0 0 0.5rem rgba(0,0,0,0.3);
+}
+
+.danger {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  border: #aaa;
+  font-size: 15px;
+  background: #f35c5c;
+  font-weight: 780;
+  transition: all 0.3s ease;
+}
+
+.danger:hover {
+  background: #df3a3a;
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(11, 11, 11, 0.4);
+    
+}
+
+
+
+
+  
