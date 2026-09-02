@@ -1,5 +1,6 @@
 import './style.css';
 
+console.log("MAIN TS BERHASIL JALAN");
 interface Todo {
   id: string;
   text: string;
@@ -110,6 +111,8 @@ function render() {
 
 // Tambah data
 function addTodo() {
+
+  console.log("TOMBOL TAMBAH DIKLIK");
   const text = taskInput.value.trim();
 
   if (text === "") {
